@@ -1,0 +1,29 @@
+/* LastPOsts */
+
+.lastPosts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.lastPosts_item {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.lastPosts_item:last-child {
+    margin-bottom: 0;
+}
+
+.lastPosts_item__circl {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.lastPosts_item__text {
+    font-size: 20px;
+    font-weight: 700;
+}

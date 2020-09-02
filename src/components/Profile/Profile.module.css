@@ -1,0 +1,33 @@
+.content {
+    grid-area: c;
+    background-color: #e9d9d9;
+    padding: 10px;
+}
+
+.content_img img {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+
+/* Profile */
+
+.profile {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.profile_info {
+    margin-left: 10px;
+    color: black
+}
+
+.profile_img img {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* Posts */
