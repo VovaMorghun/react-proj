@@ -10,9 +10,9 @@ const MyPosts = () => {
           <input type="text" placeholder="your news..." className={c.post_form__input} />
           <button type='submit' className={`${c.post_form__btn} ${c.btn} `}>Send</button>
         </form>
-        <Post />
-        <Post />
-        <Post />
+        <Post likeCount="11" />
+        <Post likeCount="12" />
+        <Post likeCount="14" />
         <Post />
         <Post />
         <Post />

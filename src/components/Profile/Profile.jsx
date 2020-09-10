@@ -5,7 +5,7 @@ import MyPosts from './MyPosts/MyPosts'
 const Profile = () => {
     return (
         <div className={c.content}>
-        <div className={c.content_img}>
+        <div className={c.profile_bigimg}>
           <img src="https://avatars.mds.yandex.net/get-pdb/752643/968aa6a1-2afe-487e-86cb-7ac8f493b324/s1200" alt="" />
         </div>
         <div className={c.profile}>

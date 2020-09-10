@@ -5,16 +5,26 @@
 }
 
 .nav_item {
+    margin-bottom: 10px;
+}
+
+.nav_item a {
     cursor: pointer;
-    padding: 3px;
     transition: color .3s linear;
     font-size: 22px;
+    text-decoration: none;
+    color: #8a5c5c;
 }
 
-.nav_item:last-child {
-    margin-top: 10px;
+.nav_item a.active {
+    color: rgb(211, 0, 0);
 }
 
-.nav_item:hover {
+.nav_item a:hover {
     color: #ffffff;
 }
+
+
+/* .nav_item.active {
+    bgc: #ff0000;
+} */
