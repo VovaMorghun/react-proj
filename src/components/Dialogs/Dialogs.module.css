@@ -2,37 +2,3 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-
-.item {
-    display: flex;
-    align-items: center;
-    padding: 11px;
-    font-size: 20px;
-}
-
-.item a {
-    color: #c26161;
-    transition: color 0.3s linear
-}
-
-.item a.active {
-    color: #202020;
-}
-
-.item a:hover {
-    color: #ff6767;
-}
-
-.item .icon {
-    width: 30px;
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-.message {
-    padding: 10px;
-    background-color: rgb(145, 194, 240);
-    margin-bottom: 10px;
-    border-radius: 20px;
-    color: #c26161
-}
