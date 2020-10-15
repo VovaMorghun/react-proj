@@ -1,4 +1,8 @@
-debugger
+import dialogReduser from './dialogReduser'
+import profileReduser from './profileReduser'
+
+
+
 
 const store = {
 
@@ -13,9 +17,6 @@ const store = {
                 { id: 1, name: "Vova" },
                 { id: 2, name: "Vasya" },
                 { id: 3, name: "Petya" },
-                { id: 3, name: "Petya" },
-                { id: 3, name: "Petya" },
-                { id: 3, name: "Petya" },
                 { id: 4, name: "Yura" }
             ],
             messagesData: [
@@ -24,6 +25,7 @@ const store = {
                 { id: 3, message: "YO" },
                 { id: 4, message: "Yooo" },
             ],
+            newMessage: '',
 
 
 
@@ -43,22 +45,11 @@ const store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            debugger
-            let postText = {
-                id: 5,
-                message: this._state.profilePage.newPostText,
-                likeCount: 0,
-            }
 
-            this._state.profilePage.postData.push(postText);
-            this._state.profilePage.newPostText = ''
-            this.rerenderEntrieTree(this._state)
+        this._state.dialogsPage = dialogReduser(this._state.dialogsPage, action);
+        this._state.profilePage = profileReduser(this._state.profilePage, action);
 
-        } else if (action.type === 'CHANGE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.text;
-            this.rerenderEntrieTree(this._state)
-        }
+        this.rerenderEntrieTree(this._state)
 
     },
 
@@ -76,6 +67,16 @@ const store = {
 
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 export default store

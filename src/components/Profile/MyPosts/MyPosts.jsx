@@ -1,6 +1,8 @@
 import React from 'react';
 import c from './MyPosts.module.css'
 import Post from './Post/Post'
+import {addPostActionCreator , changeNewPostTextActionCreator} from '../../../redux/profileReduser'
+
 
 
 
@@ -13,13 +15,14 @@ debugger
 
   const addPost = () => {
     
-    props.dispatch({type: 'ADD-POST'})
+    props.dispatch(addPostActionCreator() )
     // props.changeNewPostText('')
   }
 
   const onPostChange = () => {
     const text = NewPostEl.current.value
-    props.dispatch({type: 'CHANGE-NEW-POST-TEXT', text: text})
+    let action = changeNewPostTextActionCreator(text)
+    props.dispatch( action )
   }
 
   return (

@@ -1,4 +1,45 @@
 .dialog {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogs {
+    display: flex;
+}
+
+.messages {
+    width: 50%;
+}
+
+.tarea {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background-color: green;
+    border: none;
+    outline: none;
+    width: 90px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 25px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.btn:hover {
+    color: #ffffff;
+}
+
+.txtarea {
+    width: 50%;
+    margin-right: 10px;
+    padding: 8px 0px 20px 8px;
+    font-size: 18px;
+    background-color: #858585;
+    border: none;
+    outline: none;
 }
