@@ -1,7 +1,23 @@
 const NEW_MESSAGE_BODY = 'NEW_MESSAGE_BODY';
 const SEND_MESSAGE = 'SEND-MESSAGE';
 
-const dialogReduser = (state, action) => {
+let initialState = {
+    dialogsData: [
+        { id: 1, name: "Vova" },
+        { id: 2, name: "Vasya" },
+        { id: 3, name: "Petya" },
+        { id: 4, name: "Yura" }
+    ],
+    messagesData: [
+        { id: 1, message: "Hi" },
+        { id: 2, message: "Hello" },
+        { id: 3, message: "YO" },
+        { id: 4, message: "Yooo" },
+    ],
+    newMessage: '',
+}
+
+const dialogReduser = (state = initialState, action) => {
 
     switch (action.type) {
         case NEW_MESSAGE_BODY:

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store from './redux/state.js'
+import store from './redux/redux-store.js'
 
 debugger
 
@@ -12,10 +12,11 @@ debugger
 
 
  let rerenderEntrieTree = (state) => {
-   
+   debugger
     ReactDOM.render(
         <React.StrictMode>
           <App store = {store}
+               state = {state}
             dispatch={store.dispatch.bind(store)}
           />
         </React.StrictMode>,
@@ -24,7 +25,11 @@ debugger
 }
 
 rerenderEntrieTree(store.getState())
-store.subscribe(rerenderEntrieTree)
+
+store.subscribe( () => {
+    let state = store.getState()
+    rerenderEntrieTree(state)
+} )
 
 
 // If you want your app to work offline and load faster, you can change

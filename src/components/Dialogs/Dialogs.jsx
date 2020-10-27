@@ -2,7 +2,7 @@ import React from 'react';
 import c from './Dialogs.module.css';
 import Messages from './Messages/Messages';
 import DilogsItem from './DialogsItem/DialogsItem'; 
-import {newMessageActionCreator, sendMessageActionCreator } from '../../redux/dialogReduser'
+
 
 
 const Dialogs = (props) => {
@@ -18,15 +18,14 @@ const Dialogs = (props) => {
     const newMessage = props.state.newMessage
 
     const onMessageChange = (e) => {
-        const texbody = e.target.value
+        const textbody = e.target.value
 
-        const action = newMessageActionCreator(texbody)
-        props.dispatch(action)
+        props.newMessageBody(textbody)
+
 
     }
     const sendMessage = () => {
-        props.dispatch(sendMessageActionCreator())
-        // newMessage.current.value = ''
+        props.sendNewMessage()
     }
 
     return(
